@@ -1,0 +1,108 @@
+Sudoku Web
+==========
+:author: Matthew Todd
+:date: 2023-12-06
+:toc:
+:toclevels: 4
+:numbered:
+
+== Introduction
+
+For a long time I would solve a couple Sudoku puzzles during lunch on my wife's old iPad.
+However, in late 2023 the app stopped working, likely due to an iOS update or app update.
+Rather than trying to find another app or website, I decided to create one of my own.
+This is that application.
+It is designed for my personal use.
+
+
+== Setup
+
+=== Building
+
+TODO
+
+=== Deployment
+
+TODO
+
+=== Usage
+
+TODO
+
+
+== Requirements
+
+.Key User Requirements
+* Application shall work on all the computers I use at home, including: my wife's ancient iPad, my ancient toaster of a laptop, my gaming desktop.
+* Application shall be simple to develop, maintain, and use.
+
+.Design Requirements
+[cols="1,2,10,10"]
+|===
+| ID | Criticality | Requirement | Rationale
+
+| {counter:reqID}
+| Shall
+| Application shall be a web app.
+| I am unable and unwilling to develop and deploy to iOS.
+
+| {counter:reqID}
+| Shall
+| Application shall have minimal client side behavior.
+| It needs to run on an ancient iPad and should run on an ancient laptop.
+
+| {counter:reqID}
+| Shall
+| Application shall support mouse and/or keyboard based input.
+| It needs to run on desktop / laptop systems.
+
+| {counter:reqID}
+| Shall
+| Application shall support touch based input.
+| It needs to run on an iPad.
+
+| {counter:reqID}
+| Shall
+| Application shall generate puzzles. Or take input from a separate puzzle generator.
+| I don't want to deal with finding and downloading puzzles or any sort of manual entry.
+
+| {counter:reqID}
+| Shall
+| Application shall have an easy sudoku puzzle mode.
+| Other modes are nice, but easy mode is necessary for chill puzzle solving.
+
+| {counter:reqID}
+| Shall
+| Application shall target Debian stable for deployment.
+| I run Debian stable VMs in my homelab.
+
+| {counter:reqID}
+| Shall
+| Application shall be self-contained and not require any internet connection.
+| Simplicity, security, and allowing it to run offline locally.
+
+| {counter:reqID}
+| Should
+| Application should not have any sort of scoring or points system.
+| Previous iOS app had bugs where it'd incorrectly mark failures, which was upsetting.
+
+| {counter:reqID}
+| Nice
+| Application may support multiple clients in parallel.
+| I am the only intended user and only plan on playing on one device at a time.
+
+| {counter:reqID}
+| Nice
+| Application may have per user history tracking of puzzle generation parameters.
+| Be able to say something like "generate a new puzzle that is slightly easier/harder." Or be able to tune puzzle generation parameters for difficulty levels.
+
+|===
+
+== Release History
+
+v0.1 :: _in development_
+
+== License
+
+This project is licensed under GPL v3.0.
+
