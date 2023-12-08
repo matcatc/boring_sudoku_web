@@ -20,15 +20,25 @@ button {
 <script type="text/javascript">
     function buttonClicked(e) {
         btn = e.currentTarget;
-        console.log("button was clicked");
+        const num = document.querySelector('input[name="num"]:checked').value;
+
+        //<!-- TODO: Delete When Done Debugging-->
+        //console.log("button was clicked");
         btn.style.backgroundColor = "orange";
+
+        //<!-- TODO: Delete When Done Debugging-->
+        //console.log("radio value " + num + " selected");
+
+        // TODO: check that the value is correct before updating the button
+        btn.innerText = num
     }
 
     function setupSudokuGrid() {
         const buttonList = document.querySelectorAll('button');
         console.log('button.length() = ' + buttonList.length);
         for( let i = 0; i < buttonList.length; i++ ) {
-            buttonList[i].style.backgroundColor = "red";
+            //<!-- TODO: Delete When Done Debugging-->
+            //buttonList[i].style.backgroundColor = "red";
             buttonList[i].addEventListener("click", buttonClicked);
         }
     }
