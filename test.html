@@ -4,13 +4,29 @@ table{
     border-collapse: collapse;
 }
 td {
-    width: 1em;
-    height: 1em;
+    width: 3em;
+    height: 3em;
     text-align: center; 
     vertical-align: center;
     border: 1px solid;
 }
+button {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
 </style>
+<script defer>
+    function test() {
+        alert("button was clicked");
+    }
+
+    const buttonList = document.querySelectorAll('button');
+    console.log('button.length() = ' + buttonList.length);
+    for( let i = 0; i < buttonList.length; i++ ) {
+        buttonList[i].style.backgroundColor = "red";
+    }
+</script>
 </head>
 <body>
 
@@ -24,7 +40,8 @@ td {
         <tr> <td>6</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
         <tr> <td>7</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
         <tr> <td>8</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
-        <tr> <td>9</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
+        <!--        <tr> <td>9</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>-->
+        <tr> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> </tr>
     </table>
 
     <div>
