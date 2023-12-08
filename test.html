@@ -1,3 +1,4 @@
+<!doctype html>
 <head>
 <style>
 table{
@@ -16,19 +17,24 @@ button {
     background-color: blue;
 }
 </style>
-<script defer>
-    function test() {
-        alert("button was clicked");
+<script type="text/javascript">
+    function buttonClicked(e) {
+        btn = e.currentTarget;
+        console.log("button was clicked");
+        btn.style.backgroundColor = "orange";
     }
 
-    const buttonList = document.querySelectorAll('button');
-    console.log('button.length() = ' + buttonList.length);
-    for( let i = 0; i < buttonList.length; i++ ) {
-        buttonList[i].style.backgroundColor = "red";
+    function setupSudokuGrid() {
+        const buttonList = document.querySelectorAll('button');
+        console.log('button.length() = ' + buttonList.length);
+        for( let i = 0; i < buttonList.length; i++ ) {
+            buttonList[i].style.backgroundColor = "red";
+            buttonList[i].addEventListener("click", buttonClicked);
+        }
     }
 </script>
 </head>
-<body>
+<body onload="setupSudokuGrid()">
 
     <center>
     <table>
