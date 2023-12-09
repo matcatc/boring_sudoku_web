@@ -14,11 +14,6 @@ td {
     vertical-align: center;
     border: 1px solid;
 }
-button {
-    width: 100%;
-    height: 100%;
-    background-color: blue; /* TODO: delete when done debugging */
-}
 input {
     width: 3em;
     height: 3em;
@@ -49,35 +44,35 @@ input {
         ['9', '2', '3', '4', '5', '6', '7', '8', '9'],
     ];
 
-    function buttonClicked() {
+    function cellClicked() {
         btn = this;
         const num = document.querySelector('input[name="num"]:checked').value;
 
         // TODO: delete when done debugging
         btn.style.backgroundColor = "orange";
 
-        // TODO: mechanism to determine which button was pressed (row, col) for checking against solution?
+        // TODO: mechanism to determine which cell was pressed (row, col) for checking against solution?
 
-        // TODO: check that the value is correct before updating the button
+        // TODO: check that the value is correct before updating the cell
         btn.innerText = num
 
-        // TODO: replace button or somehow change its appearance to make it clear it was solved?
+        // TODO: replace cell or somehow change its appearance to make it clear it was solved?
 
         // TODO: check if puzzle is solved
     }
 
     /* TODO: rename method ? */
     function setupSudokuGrid() {
-        const buttonList = document.querySelectorAll('button');
-        console.log('button.length() = ' + buttonList.length);
-        for( let i = 0; i < buttonList.length; i++ ) {
+        const cellList = document.querySelectorAll('td');
+        console.log('cellList.length() = ' + cellList.length);
+        for( let i = 0; i < cellList.length; i++ ) {
             //<!-- TODO: Delete When Done Debugging-->
-            //buttonList[i].style.backgroundColor = "red";
-            buttonList[i].addEventListener("click", buttonClicked);
+            //cellList[i].style.backgroundColor = "red";
+            cellList[i].addEventListener("click", cellClicked);
         }
     }
 
-    /* TODO: initialize buttons with startin values */
+    /* TODO: initialize cells with startin values */
 </script>
 </head>
 <body onload="setupSudokuGrid()">
@@ -87,8 +82,7 @@ input {
 
     <!-- Sudoku grid / playfield -->
     <table>
-        <!-- TODO: buttons for all entry points? -->
-        <!-- TODO: attribute to determine which button (row, col) was clicked? -->
+        <!-- TODO: attribute to determine which cell (row, col) was clicked? -->
         <tr> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
         <tr> <td>2</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
         <tr> <td>3</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
@@ -97,8 +91,8 @@ input {
         <tr> <td>6</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
         <tr> <td>7</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
         <tr> <td>8</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
-        <!--        <tr> <td>9</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>-->
-        <tr> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> </tr>
+        <tr> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+        <!--<tr> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> <td><button type=button></button></td> </tr>-->
     </table>
 
     <!-- Make it easier to click radio buttons -->
