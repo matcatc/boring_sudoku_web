@@ -1,5 +1,5 @@
-Sudoku Web
-==========
+Boring Sudoku Web
+=================
 :author: Matthew Todd
 :date: 2023-12-06
 :toc:
@@ -7,6 +7,10 @@ Sudoku Web
 :numbered:
 
 == Introduction
+
+*Boring Sudoku Web*
+
+So simple, it's almost boring.
 
 For a long time I would solve a couple Sudoku puzzles during lunch on my wife's old iPad.
 However, in late 2023 the app stopped working, likely due to an iOS update or app update.
