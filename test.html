@@ -1,6 +1,9 @@
 <!doctype html>
 <head>
+<!-- TODO: standard HTML header fields? E.g.: title -->
+
 <style>
+/* TODO: sudoku grid format */
 table{
     border-collapse: collapse;
 }
@@ -14,7 +17,7 @@ td {
 button {
     width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: blue; /* TODO: delete when done debugging */
 }
 input {
     width: 3em;
@@ -22,21 +25,26 @@ input {
 }
 </style>
 <script type="text/javascript">
+    /* TODO: auto-generated solved puzzle and starting puzzle positions variables */
+
     function buttonClicked(e) {
         btn = e.currentTarget;
         const num = document.querySelector('input[name="num"]:checked').value;
 
-        //<!-- TODO: Delete When Done Debugging-->
-        //console.log("button was clicked");
+        // TODO: delete when done debugging
         btn.style.backgroundColor = "orange";
 
-        //<!-- TODO: Delete When Done Debugging-->
-        //console.log("radio value " + num + " selected");
+        // TODO: mechanism to determine which button was pressed (row, col) for checking against solution?
 
         // TODO: check that the value is correct before updating the button
         btn.innerText = num
+
+        // TODO: replace button or somehow change its appearance to make it clear it was solved?
+
+        // TODO: check if puzzle is solved
     }
 
+    /* TODO: rename method ? */
     function setupSudokuGrid() {
         const buttonList = document.querySelectorAll('button');
         console.log('button.length() = ' + buttonList.length);
@@ -46,12 +54,19 @@ input {
             buttonList[i].addEventListener("click", buttonClicked);
         }
     }
+
+    /* TODO: initialize buttons with startin values */
 </script>
 </head>
 <body onload="setupSudokuGrid()">
-
     <center>
+    <!-- TODO: link to home page? -->
+    <!-- TODO: Title? -->
+
+    <!-- Sudoku grid / playfield -->
     <table>
+        <!-- TODO: buttons for all entry points? -->
+        <!-- TODO: attribute to determine which button (row, col) was clicked? -->
         <tr> <td>1</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
         <tr> <td>2</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
         <tr> <td>3</td> <td>2</td> <td>3</td> <td>4</td> <td>5</td> <td>6</td> <td>7</td> <td>8</td> <td>9</td> </tr>
@@ -67,6 +82,7 @@ input {
     <!-- Make it easier to click radio buttons -->
     <br>
 
+    <!-- User selects what numbers they want to enter -->
     <div>
         <input type="radio" name="num" value="1">
         <label for="1">1</label>
