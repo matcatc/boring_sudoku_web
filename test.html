@@ -64,8 +64,11 @@ input {
         // TODO: delete when done debugging
         cell.style.backgroundColor = "orange";
 
-        // TODO: check that the value is correct before updating the cell
-        cell.innerText = num
+        const numCorrect = num == solvedPuzzle[row-1][col-1];
+
+        if( numCorrect ) {
+            cell.innerText = num
+        }
 
         // TODO: check if puzzle is solved
     }
