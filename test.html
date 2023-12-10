@@ -67,15 +67,15 @@ input {
     /* TODO: rename method ? */
     function setupSudokuGrid() {
         const cellList = document.querySelectorAll('td');
-        console.log('cellList.length() = ' + cellList.length);
+        console.log('cellList.length() = ' + cellList.length); // TODO: delete when done debugging
+
+        // Setup callbacks
         for( let i = 0; i < cellList.length; i++ ) {
-            //<!-- TODO: Delete When Done Debugging-->
-            //cellList[i].style.backgroundColor = "red";
             cellList[i].addEventListener("click", cellClicked);
         }
-    }
 
-    /* TODO: initialize cells with startin values */
+        // TODO: setup initial starting values
+    }
 </script>
 </head>
 <body onload="setupSudokuGrid()">
