@@ -1,11 +1,13 @@
 <!doctype html>
 <head>
-<!-- TODO: standard HTML header fields? E.g.: title -->
+    <title>Boring Sudoku Web</title>
+    <meta name"author" content="Matthew Todd">
+    <meta name="description" content="Play a simple sudoku puzzle in your browser.">
 
 <style>
-/* TODO: sudoku grid format */
 table{
     border-collapse: collapse;
+    border: solid;
 }
 td {
     width: 3em;
@@ -14,6 +16,12 @@ td {
     vertical-align: center;
     border: 1px solid;
     cursor: pointer;
+}
+td:nth-child(3n) {
+    border-right: solid;
+}
+tr:nth-child(3n) {
+    border-bottom: solid;
 }
 input {
     width: 3em;
@@ -51,8 +59,6 @@ input {
     ];
 
     function cellClicked() {
-        // TODO: ignore cells that already have a value?
-
         cell = this;
         const num = document.querySelector('input[name="num"]:checked').value;
         const row = cell.getAttribute("data-row");
@@ -61,22 +67,15 @@ input {
         console.assert(row != null, "row is null");
         console.assert(col != null, "col is null");
 
-        // TODO: delete when done debugging
-        cell.style.backgroundColor = "orange";
-
         const numCorrect = num == solvedPuzzle[row-1][col-1];
 
         if( numCorrect ) {
             cell.innerText = num
         }
-
-        // TODO: check if puzzle is solved
     }
 
-    /* TODO: rename method ? */
     function setupSudokuGrid() {
         const cellList = document.querySelectorAll('td');
-        console.log('cellList.length() = ' + cellList.length); // TODO: delete when done debugging
 
         // Setup callbacks
         for( let i = 0; i < cellList.length; i++ ) {
@@ -96,13 +95,12 @@ input {
 <body onload="setupSudokuGrid()">
     <center>
     <!-- TODO: link to home page? -->
-    <!-- TODO: Title? -->
+    <h1>Boring Sudoku Web</h1>
 
     <noscript> This site requires javascript. Please enable it. <br><br> </noscript>
 
     <!-- Sudoku grid / playfield -->
     <table>
-        <!-- TODO: attribute to determine which cell (row, col) was clicked? -->
         <tr> <td data-row="1" data-col="1"></td> <td data-row="1" data-col="2"></td> <td data-row="1" data-col="3"></td> <td data-row="1" data-col="4"></td> <td data-row="1" data-col="5"></td> <td data-row="1" data-col="6"></td> <td data-row="1" data-col="7"></td> <td data-row="1" data-col="8"></td> <td data-row="1" data-col="9"></td> </tr>
         <tr> <td data-row="2" data-col="1"></td> <td data-row="2" data-col="2"></td> <td data-row="2" data-col="3"></td> <td data-row="2" data-col="4"></td> <td data-row="2" data-col="5"></td> <td data-row="2" data-col="6"></td> <td data-row="2" data-col="7"></td> <td data-row="2" data-col="8"></td> <td data-row="2" data-col="9"></td> </tr>
         <tr> <td data-row="3" data-col="1"></td> <td data-row="3" data-col="2"></td> <td data-row="3" data-col="3"></td> <td data-row="3" data-col="4"></td> <td data-row="3" data-col="5"></td> <td data-row="3" data-col="6"></td> <td data-row="3" data-col="7"></td> <td data-row="3" data-col="8"></td> <td data-row="3" data-col="9"></td> </tr>
