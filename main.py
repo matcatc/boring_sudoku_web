@@ -17,6 +17,7 @@ the browser.
 # reverse proxy in front of it.
 import cherrypy
 
+import puzzle_generator
 import puzzle_page
 
 class BoringSudokuWeb(object):
@@ -26,28 +27,7 @@ class BoringSudokuWeb(object):
 
     @cherrypy.expose
     def puzzle(self):
-        starting_puzzle = [
-            ['1', '', '', '', '', '', '', '', ''],
-            ['2', '', '', '', '', '', '', '', ''],
-            ['3', '', '', '', '', '', '', '', ''],
-            ['4', '', '', '', '', '', '', '', ''],
-            ['5', '', '', '', '', '', '', '', ''],
-            ['6', '', '', '', '', '', '', '', ''],
-            ['7', '', '', '', '', '', '', '', ''],
-            ['8', '', '', '', '', '', '', '', ''],
-            ['9', '', '', '', '', '', '', '', ''],
-        ]
-        solved_puzzle = [
-            ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
-            ['2', '2', '3', '4', '5', '6', '7', '8', '9'],
-            ['3', '2', '3', '4', '5', '6', '7', '8', '9'],
-            ['4', '2', '3', '4', '5', '6', '7', '8', '9'],
-            ['5', '2', '3', '4', '5', '6', '7', '8', '9'],
-            ['6', '2', '3', '4', '5', '6', '7', '8', '9'],
-            ['7', '2', '3', '4', '5', '6', '7', '8', '9'],
-            ['8', '2', '3', '4', '5', '6', '7', '8', '9'],
-            ['9', '2', '3', '4', '5', '6', '7', '8', '9'],
-        ]
+        (starting_puzzle, solved_puzzle) = puzzle_generator.generate_puzzle()
         return puzzle_page.generate_puzzle_page(starting_puzzle, solved_puzzle)
 
 def main():
