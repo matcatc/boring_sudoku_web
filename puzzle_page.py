@@ -9,7 +9,7 @@ def generate_puzzle_page():
 <!doctype html>
 <head>
     <title>Boring Sudoku Web</title>
-    <meta name"author" content="Matthew Todd">
+    <meta name="author" content="Matthew Todd">
     <meta name="description" content="Play a simple sudoku puzzle in your browser.">
 
 <style>
