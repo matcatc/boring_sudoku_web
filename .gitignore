@@ -1,2 +1,3 @@
 README.html
-venv
+venv/
+__pycache__/

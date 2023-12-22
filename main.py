@@ -17,10 +17,16 @@ the browser.
 # reverse proxy in front of it.
 import cherrypy
 
+import puzzle_page
+
 class BoringSudokuWeb(object):
     @cherrypy.expose
     def index(self):
         return "Hello world!"
+
+    @cherrypy.expose
+    def puzzle(self):
+        return puzzle_page.generate_puzzle_page()
 
 def main():
     cherrypy.quickstart(BoringSudokuWeb())
