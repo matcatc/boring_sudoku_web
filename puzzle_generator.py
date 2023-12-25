@@ -89,6 +89,10 @@ def generate_puzzle(num_blank_spaces):
     puzzle position. Controls / influences difficulty.
     @return (starting_puzzle, solved_puzzle)
     '''
+    # Later code assumes num_blank_spaces is reasonable. Client code should
+    # have already limited it.
+    assert(num_blank_spaces <= (9 * 9))
+
     solved_puzzle = convert_symbol_to_number_puzzle(transform_puzzle(generate_symbol_puzzle()))
     starting_puzzle = get_starting_puzzle(solved_puzzle, num_blank_spaces)
     return (starting_puzzle, solved_puzzle)
