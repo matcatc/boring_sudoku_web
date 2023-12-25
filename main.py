@@ -54,7 +54,7 @@ class BoringSudokuWeb(object):
         return puzzle_page.generate_puzzle_page(starting_puzzle, solved_puzzle)
 
 def main():
-    cherrypy.quickstart(BoringSudokuWeb())
+    cherrypy.quickstart(BoringSudokuWeb(), config='server.conf')
 
 if __name__ == '__main__':
     main()
