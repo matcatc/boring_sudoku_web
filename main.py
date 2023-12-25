@@ -29,7 +29,7 @@ class BoringSudokuWeb(object):
     @cherrypy.expose
     def puzzle(self):
         # TODO: parameterize num_blank_spaces
-        num_blank_spaces = None
+        num_blank_spaces = 20
         (starting_puzzle, solved_puzzle) = puzzle_generator.generate_puzzle(num_blank_spaces)
         return puzzle_page.generate_puzzle_page(starting_puzzle, solved_puzzle)
 
