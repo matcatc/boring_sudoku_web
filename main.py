@@ -23,11 +23,14 @@ import puzzle_page
 class BoringSudokuWeb(object):
     @cherrypy.expose
     def index(self):
+        # TODO: index page, including form / button to generate a new puzzle
         return "Hello world!"
 
     @cherrypy.expose
     def puzzle(self):
-        (starting_puzzle, solved_puzzle) = puzzle_generator.generate_puzzle()
+        # TODO: parameterize num_blank_spaces
+        num_blank_spaces = None
+        (starting_puzzle, solved_puzzle) = puzzle_generator.generate_puzzle(num_blank_spaces)
         return puzzle_page.generate_puzzle_page(starting_puzzle, solved_puzzle)
 
 def main():
