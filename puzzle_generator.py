@@ -46,7 +46,27 @@ def transform_puzzle(puzzle):
     '''
     Perform transformations on the puzzle such as flipping, rotating, etc.
     '''
-    # TODO
+    # Testing with timeit shows random.choice and random.randrange
+    # implementations are roughly equivalent.
+    flip_horizontal = random.choice([False, True])
+    flip_vertical = random.choice([False, True])
+    rotate = random.choice([False, True])
+
+    # horizontal = around y axis
+    if flip_horizontal:
+        for row in puzzle:
+            row.reverse()
+
+    # vertical = around x axis
+    if flip_vertical:
+        puzzle.reverse()
+
+    # 180 rotation = vertical + horizontal flip. So we only support rotating 25
+    # degrees. The direction of rotation doesn't really matter.
+    if rotate:
+        # From https://stackoverflow.com/questions/8421337/rotating-a-two-dimensional-array-in-python
+        puzzle = list(zip(*puzzle[::-1]))
+
     return puzzle
 
 def convert_symbol_to_number_puzzle(symbol_puzzle):
