@@ -17,6 +17,7 @@ the browser.
 # reverse proxy in front of it.
 import cherrypy
 
+import os
 import textwrap
 
 import puzzle_generator
@@ -54,7 +55,16 @@ class BoringSudokuWeb(object):
         return puzzle_page.generate_puzzle_page(starting_puzzle, solved_puzzle)
 
 def main():
-    cherrypy.quickstart(BoringSudokuWeb(), config='server.conf')
+    app = cherrypy.tree.mount(BoringSudokuWeb(), config='server.conf')
+    app.merge({
+            '/favicon.ico':
+            {
+                'tools.staticfile.on': True,
+                'tools.staticfile.filename': os.path.join( os.path.abspath(os.path.dirname(__file__)), 'favicon.png' )
+            }
+        })
+    cherrypy.engine.start()
+    cherrypy.engine.block()
 
 if __name__ == '__main__':
     main()
