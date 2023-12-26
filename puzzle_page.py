@@ -88,8 +88,7 @@ def get_html_template():
         </head>
         <body onload="setupSudokuGrid()">
             <center>
-            <!-- TODO: link to home page? -->
-            <h1>Boring Sudoku Web</h1>
+            <h1><a href="..">Boring Sudoku Web</a></h1>
 
             <noscript> This site requires javascript. Please enable it. <br><br> </noscript>
 
