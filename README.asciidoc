@@ -21,9 +21,18 @@ It is designed for my personal use.
 
 == Setup
 
-=== Building
+=== Development
 
-TODO
+These steps assume some defaults.
+Adjust them to suit your setup.
+
+.Steps
+* Lookup Debian package `python3-cherrypy3` version.
+* Create a virtual environment: `python3 -m venv venv`
+* Activate your virtual environment: `source venv/bin/activate`
+* Install version matching Debian: `pip install cherrypy==<version-from-previous-step>`
+* Run the program: `python3 main.py`
+* Open browser tab and go to `localhost:8080`
 
 === Deployment
 
