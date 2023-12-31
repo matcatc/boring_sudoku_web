@@ -55,6 +55,7 @@ class BoringSudokuWeb(object):
         return puzzle_page.generate_puzzle_page(starting_puzzle, solved_puzzle)
 
 def main():
+    cherrypy.config.update('server.conf')
     app = cherrypy.tree.mount(BoringSudokuWeb(), config='server.conf')
     app.merge({
             '/favicon.ico':
