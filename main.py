@@ -40,7 +40,8 @@ class BoringSudokuWeb(object):
                 So simple, it's almost boring!<br>
                 <br>
                 <form method="get" action="puzzle">
-                    <input type="number" value="20" name="num_blank_spaces" min="0" max="81"/>
+                    <input type="range" value="20" name="num_blank_spaces" min="0" max="81" oninput="this.nextElementSibling.value = this.value"/>
+                    <output>20</output>
                     <button type="submit">Generate Puzzle</button>
                 </form>
                 </center>
