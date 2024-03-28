@@ -29,6 +29,11 @@ def generate_symbol_puzzle():
     '''
     Generate a solved puzzle position with symbols A-I instead of 1-9.
     '''
+    # I considered generating a random puzzle from scratch. However, this is
+    # more complex than using a predefined hardcoded puzzle. And from my
+    # testing, this plus the random transformations we apply later makes the
+    # puzzle feel completely random when playing. As such, we will keep it
+    # simple (and fast and efficient) and stick with this approach.
     puzzle = [
         ['B', 'C', 'E', 'G', 'A', 'I', 'F', 'H', 'D'],
         ['H', 'I', 'F', 'D', 'E', 'B', 'A', 'G', 'C'],
