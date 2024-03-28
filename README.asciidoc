@@ -48,8 +48,19 @@ These steps assume you are using Debian.
 
 === Usage
 
-TODO
+==== Main page
 
+* Pick how many blank spaces to have in your puzzle.
+** More spaces is more difficult.
+* Click generate.
+
+==== Puzzle page
+
+* Select a number at the bottom
+* Click on a cell to put that number there. It will only be accepted if it is correct.
+** This allows you to guess numbers to make the puzzle easier.
+* Reload the page to get a new puzzle with the same number of blank spaces.
+* To get a new puzzle with a different number of blank spaces, return to the home page.
 
 == Requirements
 
