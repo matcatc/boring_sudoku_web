@@ -36,7 +36,15 @@ Adjust them to suit your setup.
 
 === Deployment
 
-TODO
+These steps assume you are using Debian.
+
+.Steps
+* Install `python3-cherrpy3`.
+* Clone the git repository into a installation directory.
+* Update `server.conf` for which IP(s) and port to listen on.
+* Update your firewall to allow access to the IP and port.
+* Modify the included systemd `boring_sudoku_web.service` file to know the installation directory and full path to the executable `main.py`.
+* Install the systemd `boring_sudoku_web.service` file and enable / start it.
 
 === Usage
 
