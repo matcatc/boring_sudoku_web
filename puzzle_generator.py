@@ -52,6 +52,12 @@ def transform_puzzle(puzzle):
     flip_vertical = random.choice([False, True])
     rotate = random.choice([False, True])
 
+    # An alternative and more general approach to flipping is to shuffle rows
+    # and columns. I.e.: shuffle the three rows in a set and/or shuffle the
+    # three sets of rows. Likewise for columns. We are not doing that here
+    # because it's more complex than just flipping, and from my alpha testing,
+    # the flipping is sufficient by itself.
+
     # horizontal = around y axis
     if flip_horizontal:
         for row in puzzle:
