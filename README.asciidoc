@@ -62,6 +62,10 @@ These steps assume you are using Debian.
 * Reload the page to get a new puzzle with the same number of blank spaces.
 * To get a new puzzle with a different number of blank spaces, return to the home page.
 
+=== Examples / Samples
+
+See the "examples" folder.
+
 == Requirements
 
 .Key User Requirements
