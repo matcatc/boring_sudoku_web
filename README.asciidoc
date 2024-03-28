@@ -128,6 +128,11 @@ These steps assume you are using Debian.
 | Application may have per user history tracking of puzzle generation parameters.
 | Be able to say something like "generate a new puzzle that is slightly easier/harder." Or be able to tune puzzle generation parameters for difficulty levels.
 
+| {counter:reqID}
+| May
+| Application may generate puzzles with more than one solution.
+| Officially a Sudoku puzzle should only have one solution. But allowing puzzles with more than one solution simplifies implementation.
+
 |===
 
 == Release History
