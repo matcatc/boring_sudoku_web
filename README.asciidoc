@@ -141,7 +141,9 @@ See the "examples" folder.
 
 == Release History
 
-v0.1 :: _in development_
+v1.0 :: Initial release ready version.
+Basic puzzle generation by transforming a predefined puzzle.
+Basic puzzle UI with radio buttons and clicking on cells in a HTML table.
 
 == License
 
