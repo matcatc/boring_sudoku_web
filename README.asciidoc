@@ -146,4 +146,5 @@ v0.1 :: _in development_
 == License
 
 This project is licensed under GPL v3.0.
+See COPYING or https://www.gnu.org/licenses/ for more details.
 
