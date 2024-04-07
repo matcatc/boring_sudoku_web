@@ -65,6 +65,8 @@ These steps assume you are using Debian.
 === Examples / Samples
 
 See the "examples" folder.
+If viewing the repository online (e.g.: on Github), you will likely need to download the example file to run it.
+The example files are self-contained, so you should only need to download one example and open in your browser of choice.
 
 == Requirements
 
